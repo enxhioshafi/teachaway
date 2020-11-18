@@ -21,6 +21,7 @@
 		<link rel="profile" href="https://gmpg.org/xfn/11">
 
 		<?php wp_head(); ?>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 	</head>
 
@@ -45,7 +46,8 @@
 
 						?>
 
-						<button class="toggle search-toggle mobile-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
+					<button class="toggle search-toggle mobile-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false"
+				>
 							<span class="toggle-inner">
 								<span class="toggle-icon">
 									<?php twentytwenty_the_theme_svg( 'search' ); ?>
@@ -124,7 +126,7 @@
 					if ( true === $enable_header_search || has_nav_menu( 'expanded' ) ) {
 						?>
 
-						<div class="header-toggles hide-no-js">
+						<div class="header-toggles hide-no-js" style="display:none;">
 
 						<?php
 						if ( has_nav_menu( 'expanded' ) ) {

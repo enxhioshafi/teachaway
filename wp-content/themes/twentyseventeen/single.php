@@ -1,47 +1,52 @@
+<?php get_header();
+
+while (have_posts()) {
+    the_post();
+
+?>
+    <!-- included header -->
+
+<div class =" content main-header">
+<div class = "container header-img"  style="
+background-image: url(https://www.teachaway.com/sites/default/files/online-tefl-certification.jpg);">
+<div class=" container tefl">
+<h1>Online TEFL certification</h1>
+<p>Teach English abroad or online with an TEFL certificate from the world’s leading universities.&nbsp;</p></div>
+<div class="container">
+<div class="col-12 row test">
+<div class="col-6">
+<div class="description">
+<p ><img src="../../wp-content/uploads/2020/11/ih-berkeley-logo-text.png">Designed by the education faculty at Canada’s largest and internationally top-ranked university, this online TEFL course offers 100-, 120- and 150-hour options. The customizable curriculum from the University of Toronto OISE offers such specializations as: Teaching Business English, Teaching Young Learners and Teaching English to Mandarin Speakers.</p>
+<div class="cta">
+<a class="btn btn-cta-front" href="/courses/oise-tefl" title="Learn More">Learn More</a>
+<a class="btn btn-cta" href="https://teflonline.teachaway.com/enroll/" title="Enroll Now">Enroll Now</a>
+</div>
+</div>
+</div>
+<div class="col-6" style="    border-top: 6px solid #ce7029;">
+<div class="description">
+<p ><img src="../../wp-content/uploads/2020/11/ezgif.com-gif-maker.jpg">Developed in partnership with the Robertson Center for Intercultural Leadership at I-House Berkeley, this flexible online course gives you a TEFL certificate that focuses on developing skills for living and working in a global setting.</p>
+<div class="cta">
+<a class="btn btn-cta-front" href="/courses/oise-tefl" title="Learn More">Learn More</a>
+<a class="btn btn-cta" href="https://teflonline.teachaway.com/enroll/" title="Enroll Now">Enroll Now</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+				<section class="page-content col-lg-9">
+					<?php
+					the_content();
+					?>
+				</section>
+
+
+</div>
+
 <?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
- * @version 1.0
- */
+}
+?>
 
-get_header(); ?>
-
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-			<?php
-			// Start the Loop.
-			while ( have_posts() ) :
-				the_post();
-
-				get_template_part( 'template-parts/post/content', get_post_format() );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-				the_post_navigation(
-					array(
-						'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'twentyseventeen' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'twentyseventeen' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
-						'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'twentyseventeen' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'twentyseventeen' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
-					)
-				);
-
-			endwhile; // End the loop.
-			?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
-</div><!-- .wrap -->
-
-<?php
-get_footer();
+<?php get_footer() ?>

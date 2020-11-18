@@ -12,47 +12,54 @@
  */
 
 ?>
-			<footer id="site-footer" role="contentinfo" class="header-footer-group">
+<div id="footer-bar" class="footer-bar-1" style="transform: translate(0px, 0px);">
+<a href="#"><i class="fa fa-home"></i><span>Jobs</span></a>
+<a href="#"><i class="fa fa-star"></i><span>Tefl</span></a>
+<a href="#"><i class="fa fa-shopping-cart"></i><span>Teacher<br> Certification</span></a>
+<a href="#"><i class="fa fa-user"></i><span>Hire <br>Teachers</span></a>
+</div>
+<footer id="site-footer" role="contentinfo" class="header-footer-group">
+<div class="footer container ">
 
-				<div class="section-inner">
+    <div class="pure-g row col-md-12">
 
-					<div class="footer-credits">
+        <div class="pure-u-1 pure-u-sm-1 pure-u-md-1 pure-u-lg-1-5 pure-u-xl-1-5 col-md-3">
 
-						<p class="footer-copyright">&copy;
-							<?php
-							echo date_i18n(
-								/* translators: Copyright date format, see https://www.php.net/date */
-								_x( 'Y', 'copyright date format', 'twentytwenty' )
-							);
-							?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-						</p><!-- .footer-copyright -->
+            <?php dynamic_sidebar( 'footer_area_one' ); ?>
 
-						<p class="powered-by-wordpress">
-							<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentytwenty' ) ); ?>">
-								<?php _e( 'Powered by WordPress', 'twentytwenty' ); ?>
-							</a>
-						</p><!-- .powered-by-wordpress -->
+        </div>
 
-					</div><!-- .footer-credits -->
+        <div class="pure-u-1 pure-u-sm-1-3 pure-u-md-1-3 pure-u-lg-1-5 pure-u-xl-1-5 col-md-3">
 
-					<a class="to-the-top" href="#site-header">
-						<span class="to-the-top-long">
-							<?php
-							/* translators: %s: HTML character for up arrow. */
-							printf( __( 'To the top %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
-							?>
-						</span><!-- .to-the-top-long -->
-						<span class="to-the-top-short">
-							<?php
-							/* translators: %s: HTML character for up arrow. */
-							printf( __( 'Up %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
-							?>
-						</span><!-- .to-the-top-short -->
-					</a><!-- .to-the-top -->
+            <?php dynamic_sidebar( 'footer_area_two' ); ?>
 
-				</div><!-- .section-inner -->
+        </div>
 
+        <div class="pure-u-1 pure-u-sm-1-3 pure-u-md-1-3 pure-u-lg-1-5 pure-u-xl-1-5 col-md-3">
+
+            <?php dynamic_sidebar( 'footer_area_three' ); ?>
+
+        </div>
+
+        <div class="pure-u-1 pure-u-sm-1-3 pure-u-md-1-3 pure-u-lg-1-5 pure-u-xl-1-5 col-md-3">
+
+            <?php dynamic_sidebar( 'footer_area_four' ); ?>
+
+        </div>
+
+    </div>
+
+</div></footer>
+			<footer id="site-footer" role="contentinfo" class="header-footer-group col-12">
+
+
+
+					<div class="footer-credits"><div class="partneret1 part-footer row ">
+                                                <div class="column"><img src="http://localhost/teachaway/wp-content/uploads/2020/11/Screenshot_1.jpg"></div><div class="column">
+                                                	<img src="https://www.teachaway.com/themes/contrib/tams/images/gptw.png"></div></div>
+
+
+</div>
 			</footer><!-- #site-footer -->
 
 		<?php wp_footer(); ?>

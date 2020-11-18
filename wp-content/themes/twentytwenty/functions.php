@@ -180,6 +180,13 @@ require get_template_directory() . '/inc/custom-css.php';
 /**
  * Register and Enqueue Styles.
  */
+  //bootstrap
+  function wpbootstrap_enqueue_styles() {
+  wp_enqueue_style( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' );
+  wp_enqueue_style( 'my-style', get_template_directory_uri() . '/style.css');
+  }
+  add_action('wp_enqueue_scripts', 'wpbootstrap_enqueue_styles');
+
 function twentytwenty_register_styles() {
 
 	$theme_version = wp_get_theme()->get( 'Version' );
@@ -196,6 +203,13 @@ function twentytwenty_register_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'twentytwenty_register_styles' );
+
+function twentytwenty_enqueue_styles() {
+    wp_register_style('bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.css' );
+    $dependencies = array('bootstrap');
+    wp_enqueue_style( 'bootstrapstarter-style', get_stylesheet_uri(), $dependencies );
+}
+add_action( 'wp_enqueue_scripts', 'twentytwenty_enqueue_styles' );
 
 /**
  * Register and Enqueue Scripts.
@@ -681,6 +695,7 @@ function twentytwenty_get_customizer_color_vars() {
 	return $colors;
 }
 
+
 /**
  * Get an array of elements.
  *
@@ -754,3 +769,48 @@ function twentytwenty_get_elements_array() {
 	*/
 	return apply_filters( 'twentytwenty_get_elements_array', $elements );
 }
+function register_widget_areas() {
+
+  register_sidebar( array(
+    'name'          => 'Footer area one',
+    'id'            => 'footer_area_one',
+    'description'   => 'This widget area discription',
+    'before_widget' => '<div class="footer-area footer-area-one">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>',
+  ));
+
+  register_sidebar( array(
+    'name'          => 'Footer area two',
+    'id'            => 'footer_area_two',
+    'description'   => 'This widget area discription',
+    'before_widget' => '<div class="footer-area footer-area-two">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>',
+  ));
+
+  register_sidebar( array(
+    'name'          => 'Footer area three',
+    'id'            => 'footer_area_three',
+    'description'   => 'This widget area discription',
+    'before_widget' => '<div class="footer-area footer-area-three">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>',
+  ));
+
+  register_sidebar( array(
+    'name'          => 'Footer area four',
+    'id'            => 'footer_area_four',
+    'description'   => 'This widget area discription',
+    'before_widget' => '<div class="footer-area footer-area-three">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>',
+  ));
+
+}
+
+add_action( 'widgets_init', 'register_widget_areas' );
