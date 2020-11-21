@@ -24,26 +24,97 @@
     <div class="pure-g row col-md-12">
 
         <div class="pure-u-1 pure-u-sm-1 pure-u-md-1 pure-u-lg-1-5 pure-u-xl-1-5 col-md-3">
-
-            <?php dynamic_sidebar( 'footer_area_one' ); ?>
+        <h2>Latest Posts</h2>
+        <ul>
+ 
+ <?php 
+ // Define our WP Query Parameters
+ $the_query = new WP_Query( 'posts_per_page=5' ); ?>
+   
+  
+ <?php 
+ // Start our WP Query
+ while ($the_query -> have_posts()) : $the_query -> the_post(); 
+ // Display the Post Title with Hyperlink
+ ?>
+   
+  
+ <li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+   
+  
+ <li><?php 
+ // Display the Post Excerpt
+ the_excerpt(__('(more…)')); ?></li>
+   
+  
+ <?php 
+ // Repeat the process and reset once it hits the limit
+ endwhile;
+ wp_reset_postdata();
+ ?>
+ </ul>
 
         </div>
 
         <div class="pure-u-1 pure-u-sm-1-3 pure-u-md-1-3 pure-u-lg-1-5 pure-u-xl-1-5 col-md-3">
 
-            <?php dynamic_sidebar( 'footer_area_two' ); ?>
+        <h2 id="block-about-menu">About</h2>
+<ul class="footer-link">
+  <li>About Us</li>
+  <li>Blog</li>
+  <li>Professional Development</li>
+  <li>Teach English Abroad</li>
+  <li> Careers at Teach Away</li>
+  <li>Privacy Policy</li>
+</ul>
 
         </div>
 
         <div class="pure-u-1 pure-u-sm-1-3 pure-u-md-1-3 pure-u-lg-1-5 pure-u-xl-1-5 col-md-3">
 
-            <?php dynamic_sidebar( 'footer_area_three' ); ?>
+        <div>
+        <h2>Get in touch</h2>
+<p>HQ: 343-2927 Lakeshore Blvd W.<br>Toronto, Ontario&nbsp;M8V 1J3</p>
+</div>
+<footer>
+  <div class="rounded-social-buttons">
+                    <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+</footer>
+<h4>
+Also seen on
+</h4>
+<div class="partneret row col-12">
+<div class="column">
+<img src="https://www.teachaway.com/themes/contrib/tams/images/footer-logos/abc.webp" style="max-width: 42px;"></div>
+<div class="column"><img src="https://www.teachaway.com/themes/contrib/tams/images/footer-logos/cbs.png"></div>
+<div class="column"><img src="https://www.teachaway.com/themes/contrib/tams/images/footer-logos/nbc.webp"></div>
+<div class="column">
+<img src="https://www.teachaway.com/themes/contrib/tams/images/footer-logos/theglobeandmail.webp"></div>
+<div class="column">
+<img src="https://www.teachaway.com/themes/contrib/tams/images/footer-logos/chicago_tribune.webp"></div>
+</div>
+<div class="partneret row col-12">
 
+</div>     
         </div>
 
         <div class="pure-u-1 pure-u-sm-1-3 pure-u-md-1-3 pure-u-lg-1-5 pure-u-xl-1-5 col-md-3">
 
-            <?php dynamic_sidebar( 'footer_area_four' ); ?>
+        <h2 id="block-about-menu">Contacts</h2>
+<ul  class="footer-link">
+  <li>Toronto, Canada
+</li>
+  <li>Vancouver, Canada
+</li>
+<li>Dover, USA</li>
+<li>Edinburgh, UK</li>
+ 
+</ul>
 
         </div>
 

@@ -62,12 +62,12 @@
 
 						<?php
 							// Site title or logo.
-							twentytwenty_site_logo();
+							//twentytwenty_site_logo();
 
 							// Site description.
-							twentytwenty_site_description();
+							//twentytwenty_site_description();
 						?>
-
+<img src="https://www.teachaway.com/themes/contrib/tams/logo.svg"alt="Teach Away Logo" height="39" width="144">
 					</div><!-- .header-titles -->
 
 					<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
@@ -83,7 +83,7 @@
 
 				<div class="header-navigation-wrapper">
 
-					<?php
+				<!--	<?php
 					if ( has_nav_menu( 'primary' ) || ! has_nav_menu( 'expanded' ) ) {
 						?>
 
@@ -116,7 +116,41 @@
 								}
 								?>
 
-								</ul>
+								</ul> -->
+								<div class="navbar-header">
+  <div class="dropdown-header ">
+    <button class="dropbtn-header homemenu">JOBS
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content-header">
+      <a class="homemenu" href="#">TEST</a>
+      <a class="homemenu" href="#">TEST</a>
+      
+    </div></div>
+ <div class="dropdown-header ">
+    <button class="dropbtn-header homemenu">TEFL
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content-header">
+      <a class="homemenu" href="#">TEST</a>
+      <a class="homemenu" href="#">TEST</a>
+      
+    </div></div>
+  <div class="dropdown-header ">
+    <button class="dropbtn-header homemenu">TEACHER CERTIFICATION
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content-header">
+      <a class="homemenu" href="#">TEST</a>
+      <a class="homemenu" href="#">TEST</a>
+      
+    </div>
+  </div> 
+   <a class="homemenu" href="#">COURSES</a>
+    <a class="homemenu" href="#">HIRE TEACHERS</a>
+	 <a class="homemenu logini" href="#">LOGIN</a>
+	  <a class="homemenu registeri" href="#">REGISTER</a>
+    </div>
 
 							</nav><!-- .primary-menu-wrapper -->
 
